@@ -63,6 +63,13 @@
 </head>
 <body class="antialiased text-slate-800">
 
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="subject" />
+      <textarea name="message"></textarea>
+    </form>
+
     <!-- Header & Navigation -->
     <header class="bg-white/80 backdrop-blur-lg border-b border-gray-200 sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
