@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,8 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
-    <!-- ================== JSON-LD Structured Data for SEO & ATS ================== -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -165,19 +161,6 @@
             border-color: #14b8a6;
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
-        .career-path-card {
-            background-color: #fff;
-            border: 1px solid #e2e8f0;
-            border-radius: 0.75rem;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .career-path-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-            border-color: #14b8a6;
-        }
     </style>
 </head>
 <body class="antialiased text-slate-800">
@@ -192,14 +175,15 @@
     <!-- Header & Navigation -->
     <header class="bg-white/80 backdrop-blur-lg border-b border-gray-200 sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#about" class="text-2xl font-bold text-slate-900" onclick="showPage('about')">
+            <a href="#home" class="text-2xl font-bold text-slate-900" onclick="showPage('home')">
                 Volkan Kilinc, <span class="text-teal-600">Ph.D.</span>
             </a>
             <div class="hidden md:flex items-center space-x-8">
-                <a href="#about" class="nav-link active" onclick="showPage('about', this)">About</a>
-                <a href="#scientist" class="nav-link" onclick="showPage('scientist', this)">Material Scientist</a>
-                <a href="#ai-architect" class="nav-link" onclick="showPage('ai-architect', this)">AI Architect</a>
+                <a href="#home" class="nav-link active" onclick="showPage('home', this)">Home</a>
+                <a href="#about" class="nav-link" onclick="showPage('about', this)">About</a>
+                <a href="#portfolio" class="nav-link" onclick="showPage('portfolio', this)">Portfolio</a>
                 <a href="#services" class="nav-link" onclick="showPage('services', this)">Services</a>
+                <a href="#publications" class="nav-link" onclick="showPage('publications', this)">Publications</a>
                 <a href="#contact" class="nav-link" onclick="showPage('contact', this)">Contact</a>
             </div>
             <div class="flex items-center">
@@ -210,100 +194,89 @@
         </nav>
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 border-t border-gray-200">
+            <a href="#home" class="block py-2 text-gray-600 hover:text-teal-600" onclick="showPage('home')">Home</a>
             <a href="#about" class="block py-2 text-gray-600 hover:text-teal-600" onclick="showPage('about')">About</a>
-            <a href="#scientist" class="block py-2 text-gray-600 hover:text-teal-600" onclick="showPage('scientist')">Material Scientist</a>
-            <a href="#ai-architect" class="block py-2 text-gray-600 hover:text-teal-600" onclick="showPage('ai-architect')">AI Architect</a>
+            <a href="#portfolio" class="block py-2 text-gray-600 hover:text-teal-600" onclick="showPage('portfolio')">Portfolio</a>
             <a href="#services" class="block py-2 text-gray-600 hover:text-teal-600" onclick="showPage('services')">Services</a>
+            <a href="#publications" class="block py-2 text-gray-600 hover:text-teal-600" onclick="showPage('publications')">Publications</a>
             <a href="#contact" class="block py-2 text-gray-600 hover:text-teal-600" onclick="showPage('contact')">Contact</a>
         </div>
     </header>
 
     <!-- Main Content -->
     <main class="container mx-auto px-6 py-12">
-
-        <!-- About Section (New Landing Page) -->
-        <section id="about" class="page-section active fade-in">
-             <div class="text-center mb-16">
-                <img src="volkan-kilinc-profile.png" alt="Volkan Kilinc" class="rounded-full shadow-xl mx-auto w-48 h-48 object-cover border-4 border-white mb-6">
-                <h1 class="text-3xl md:text-4xl font-bold text-slate-900">Volkan Kilinc, Ph.D.</h1>
-                <p class="text-xl text-teal-600 font-semibold mt-1">Polyvalent Scientist & AI Architect</p>
-                <p class="text-lg text-slate-600 mt-4 max-w-3xl mx-auto">
-                    I apply the rigorous, first-principles mindset of a Ph.D. to a wide range of challenges. My career is defined by two interconnected paths: a deep foundation in scientific research and a forward-looking passion for architecting AI-powered solutions. Explore my achievements in each domain below.
+        <!-- Home Section -->
+        <section id="home" class="page-section active fade-in min-h-[70vh] flex items-center">
+            <div class="w-full md:w-3/4 lg:w-2/3">
+                <span class="font-semibold text-teal-600">A Polyvalent Scientist & AI Architect</span>
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mt-2 mb-4 leading-tight">
+                    Architecting AI-Driven Solutions<span class="text-teal-600">for Complex Global Challenges.</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-8">
+                    As an application-oriented scientist, I apply the first-principles thinking of my Ph.D. to deconstruct any complex problem. My deep R&D background serves as the foundation to lead the end-to-end creation of innovative, technology-agnostic solutions, from initial concept to tangible impact.
                 </p>
-             </div>
-             <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="career-path-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-teal-600 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 6.375C5.25 5.339 6.089 4.5 7.125 4.5h9.75c1.036 0 1.875.84 1.875 1.875v11.25c0 1.036-.84 1.875-1.875 1.875h-9.75A1.875 1.875 0 015.25 17.625V6.375z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM15.75 12.75a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-                    </svg>
-                    <h2 class="text-2xl font-bold text-slate-900">Material Scientist</h2>
-                    <p class="text-slate-600 mt-2 mb-6">My foundational career in deep-tech R&D, focusing on nanotechnology, biosensors, and innovative materials. This path highlights my core scientific contributions, publications, and patented inventions.</p>
-                    <a href="#scientist" onclick="showPage('scientist')" class="bg-teal-600 text-white font-semibold px-6 py-3 rounded-lg shadow-sm hover:bg-teal-700 transition-transform transform hover:scale-105">View Scientific Achievements</a>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#portfolio" onclick="showPage('portfolio')" class="bg-teal-600 text-white font-semibold px-6 py-3 rounded-lg shadow-sm hover:bg-teal-700 transition-transform transform hover:scale-105">View My Work</a>
+                    <a href="#contact" onclick="showPage('contact')" class="bg-white text-slate-700 font-semibold px-6 py-3 rounded-lg shadow-sm border border-gray-300 hover:bg-gray-50 transition-transform transform hover:scale-105">Get in Touch</a>
+                    <!-- TODO: Place your CV file named 'CV_Volkan_Kilinc.pdf' in the same folder as this index.html file -->
+                    <a href="CV_Volkan_Kilinc.pdf" download="CV_Volkan_Kilinc.pdf" class="bg-white text-slate-700 font-semibold px-6 py-3 rounded-lg shadow-sm border border-gray-300 hover:bg-gray-50 transition-transform transform hover:scale-105 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        <span>Download My CV</span>
+                    </a>
                 </div>
-                <div class="career-path-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-teal-600 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
-                    <h2 class="text-2xl font-bold text-slate-900">AI Architect & Innovator</h2>
-                    <p class="text-slate-600 mt-2 mb-6">My current focus on applying scientific problem-solving to the world of AI. This path showcases my work in architecting and directing the creation of full-stack, AI-powered applications from concept to deployment.</p>
-                    <a href="#ai-architect" onclick="showPage('ai-architect')" class="bg-teal-600 text-white font-semibold px-6 py-3 rounded-lg shadow-sm hover:bg-teal-700 transition-transform transform hover:scale-105">Explore AI Projects</a>
-                </div>
-             </div>
-             <div class="text-center mt-12">
-                <a href="CV_Volkan_Kilinc.pdf" download="CV_Volkan_Kilinc.pdf" class="bg-white text-slate-700 font-semibold px-6 py-3 rounded-lg shadow-sm border border-gray-300 hover:bg-gray-50 transition-transform transform hover:scale-105 inline-flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                    </svg>
-                    <span>Download My CV</span>
-                </a>
-             </div>
+            </div>
         </section>
 
-        <!-- Material Scientist Achievements Page -->
-        <section id="scientist" class="page-section fade-in">
-             <div class="min-h-[50vh] flex items-center mb-16">
-                 <div class="w-full">
-                    <span class="font-semibold text-teal-600">A Foundation in Deep-Tech & R&D</span>
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mt-2 mb-4 leading-tight">
-                        Pioneering Innovations in <span class="text-teal-600">Nanotechnology & Materials Science.</span>
-                    </h1>
-                    <p class="text-lg text-slate-600 max-w-3xl">
-                        My foundational career in deep-tech R&D, focused on inventing and developing novel technologies from first principles. This path highlights my core scientific contributions, patented inventions, and peer-reviewed publications.
+        <!-- About Me Section -->
+        <section id="about" class="page-section fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">About Me</h2>
+                <p class="text-lg text-slate-600 mt-2">My journey from materials science to AI-driven innovation.</p>
+            </div>
+            <div class="flex flex-col md:flex-row items-start gap-12">
+                <div class="w-full md:w-1/3 text-center md:text-left">
+                    <!-- TODO: Place your profile photo named 'volkan-kilinc-profile.png' in the same folder as this index.html file -->
+                    <img src="volkan-kilinc-profile.png" alt="Volkan Kilinc" class="rounded-full shadow-xl mx-auto w-64 h-64 object-cover border-4 border-white">
+                    <h3 class="text-2xl font-bold mt-6 text-slate-900">Volkan Kilinc, Ph.D.</h3>
+                    <p class="text-teal-600 font-semibold">Scientist & AI Developer</p>
+                    <p class="text-sm text-slate-500 mt-2">Paris, France</p>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <h4 class="text-xl font-semibold text-slate-800 mb-2">Professional Summary</h4>
+                    <p class="text-slate-700 mb-6 leading-relaxed">
+                        I am an interdisciplinary Ph.D. scientist with over five years of experience at the intersection of research and development, specializing in DNA nanotechnology, materials science, and advanced sensor fabrication. My career has been driven by a passion for solving complex problems, leading research projects from their initial concept to peer-reviewed publication, patenting, and securing competitive international funding like the JSPS Fellowship.
                     </p>
-                </div>
-            </div>
-
-            <!-- Scientific Projects -->
-            <div class="mb-20">
-                <h3 class="text-2xl font-semibold text-slate-800 mb-8 border-b pb-4">Scientific Research Projects</h3>
-                <div class="grid md:grid-cols-2 gap-8">
-                    <div class="content-card rounded-lg overflow-hidden group flex flex-col">
-                        <img src="https://placehold.co/600x400/e2e8f0/475569?text=DNA-FET" alt="Nanotechnology / DNA representation" class="w-full h-56 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-slate-900">DNA-FET for High-Speed Data Retrieval</h4>
-                            <p class="text-teal-600 font-semibold text-sm mt-1">Lead Researcher & Inventor</p>
-                            <p class="mt-4 text-slate-700 flex-grow">Developed and fabricated a proof-of-concept DNA Field-Effect Transistor (FET) for a novel electronic method of data location in DNA data storage. This foundational work led to a first-author publication and a Japanese patent application.</p>
-                            <div class="mt-4"><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Sensor Fabrication</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">DNA Nanotechnology</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Patent Application</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">R&D</span></div>
+                    <p class="text-slate-700 leading-relaxed">
+                        As an adaptable and creative problem-solver, I have eagerly embraced emerging technologies. I have a proven track record of directing generative AI to architect and deploy sophisticated applications, including a multi-agent system for automated scientific peer-review. My goal is to apply my deep scientific background and technical project management skills to address significant challenges in a research or technology-focused environment.
+                    </p>
+                    <h4 class="text-xl font-semibold text-slate-800 mt-8 mb-4">Core Competencies</h4>
+                    <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 text-sm">
+                        <div class="bg-white p-4 rounded-lg content-card">
+                            <h5 class="font-bold text-slate-900">Scientific Research</h5>
+                            <ul class="list-disc list-inside mt-2 text-slate-600"><li>DNA Nanotechnology</li><li>Biosensors & FETs</li><li>Surface Chemistry</li></ul>
                         </div>
-                    </div>
-                    <div class="content-card rounded-lg overflow-hidden group flex flex-col">
-                        <img src="https://placehold.co/600x400/e2e8f0/475569?text=DNA-pods" alt="Biomimetic nanocarrier representation" class="w-full h-56 object-cover">
-                        <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-slate-900">DNA-pods: Biomimetic Nanocarriers</h4>
-                            <p class="text-teal-600 font-semibold text-sm mt-1">Lead Researcher & Inventor</p>
-                            <p class="mt-4 text-slate-700 flex-grow">Designed and synthesized "DNA-pods," a novel class of self-assembled DNA condensates for cost-effective therapeutic delivery. Engineered a unique, thermally-triggered release mechanism inspired by viral uncoating.</p>
-                            <div class="mt-4"><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Drug Delivery</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Self-Assembly</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Biomimicry</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Synthesis</span></div>
+                        <div class="bg-white p-4 rounded-lg content-card">
+                            <h5 class="font-bold text-slate-900">Data Analysis</h5>
+                            <ul class="list-disc list-inside mt-2 text-slate-600"><li>Microscopy (SEM, AFM)</li><li>Spectroscopy</li><li>Electrical Analysis</li></ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg content-card">
+                            <h5 class="font-bold text-slate-900">Project Management</h5>
+                            <ul class="list-disc list-inside mt-2 text-slate-600"><li>Grant Writing & Funding</li><li>IP Strategy</li><li>Tech Transfer</li></ul>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg content-card">
+                             <h5 class="font-bold text-slate-900">AI & Development</h5>
+                            <ul class="list-disc list-inside mt-2 text-slate-600"><li>Prompt Engineering</li><li>AI System Architecture</li><li>Full-Stack & DevOps</li></ul>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Supervisor Testimonials -->
-             <div class="mb-20">
-                <h3 class="text-2xl font-semibold text-slate-800 mb-8 border-b pb-4">Supervisor Testimonials</h3>
-                <p class="text-center text-slate-600 -mt-6 mb-10">From My Ph.D. & Postdoctoral Work</p>
+            <div class="mt-20">
+                <h3 class="text-2xl md:text-3xl font-bold text-center mb-4 text-slate-900">What My Supervisors Say</h3>
+                <p class="text-center text-slate-600 mb-10">From My Ph.D. & Postdoctoral Work</p>
                 <div class="grid md:grid-cols-3 gap-8">
-                     <div class="bg-white p-6 rounded-lg content-card flex flex-col">
+                    <div class="bg-white p-6 rounded-lg content-card flex flex-col">
                         <p class="text-slate-600 italic flex-grow">"He exhibits great creativity in the laboratory, and I was impressed by his methodical approach and excellent technique, in particular, in dealing with such diverse technologies as transistor fabrication, solution chemistry and DNA hybridization."</p>
                         <div class="mt-4 pt-4 border-t"><p class="font-bold text-slate-800">Dr. Jonathan P. Hill</p><p class="text-sm text-slate-500">Group Leader, NIMS, Japan</p></div>
                     </div>
@@ -328,85 +301,71 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Publications -->
-             <div>
-                <h3 class="text-2xl font-semibold text-slate-800 mb-8 border-b pb-4">Publications & Patents</h3>
-                <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg border border-gray-200">
-                    <div>
-                        <h4 class="text-xl font-semibold text-slate-800 mb-6 border-b pb-3">Highlighted Publications</h4>
-                        <ul class="space-y-4 text-slate-700">
-                            <li><p><span class="font-semibold text-slate-900">Kilinc, V.*, Sutrisno, L., Henzie, J., Picheau, E., Yamauchi, Y., Ariga, K., Hill, J.P.*</span> (2025). <span>DNA-pods Mimicking Viral Uncoating with Functional Molecule Encapsulation Capabilities.</span> <em class="text-slate-500">Under review at Communications Materials</em>.</p></li>
-                            <li><p><span class="font-semibold text-slate-900">Kilinc, V.*, Henzie, J., Picheau, E., Yamauchi, Y., Hill, J.*</span> (2025). <a href="https://chemrxiv.org/engage/chemrxiv/article-details/67aee2abfa469535b9427eb7" target="_blank" class="text-teal-600 hover:underline">DNA Chromopods: Engineering Chromosome-Inspired Nanoarchitectures as Protocell Blueprints.</a> <em class="text-slate-500">ChemRxiv</em>.</p></li>
-                            <li><p><span class="font-semibold text-slate-900">Kilinc, V.*, Hayakawa, R., Yamauchi, Y., Wakayama, Y., Hill, J.P.* </span> (2024). <a href="https://doi.org/10.1002/adsr.202300176" target="_blank" class="text-teal-600 hover:underline">Nanoporous Dna Field Effect Transistor with Potential for Random-Access Memory Applications.</a> <em class="text-slate-500">Advanced Sensor Research</em>.</p></li>
-                            <li><p><span class="font-semibold text-slate-900">Nguy, T.P., Kilinc, V. (co-first author),Hayakawa, R., Henry-de-Villeneuve, C., Raimundo, J-M.*, Wakayama, Y.*, Charrier, A.*</span> (2022). <a href="https://doi.org/10.1016/j.snb.2021.130956" target="_blank" class="text-teal-600 hover:underline">Affinity driven ion exchange EG-OFET sensor for high selectivity and low limit of detection of cesium in seawater.</a> <em class="text-slate-500">Sensors and Actuators B: Chemical</em>.</p></li>
-                            <li><p><span class="font-semibold text-slate-900">Nguy, T.P., Hayakawa, R., Kilinc, V., Petit, M., Raimundo, J-M., Charrier, A., Wakayama, Y.* </span> (2020). <a href="https://doi.org/10.1149/ma2020-01312330mtgabs" target="_blank" class="text-teal-600 hover:underline">Electrolyte-Gated Organic Field-Effect Transistor for Ultra-Sensitive Cs Ion Sensor.</a> <em class="text-slate-500">ECS Meeting Abstracts</em>.</p></li>
-                            <li><p><span class="font-semibold text-slate-900">Nguy, T.P., Hayakawa, R., Kilinc, V., Petit, M., Yemineni, N. S L V; Higuchi, M.; Raimundo, J-M., Charrier, A., Wakayama, Y.* </span> (2020). <a href="https://doi.org/10.7567/1882-0786/ab5322" target="_blank" class="text-teal-600 hover:underline">Electrolyte-gated-organic field effect transistors functionalized by lipid monolayers with tunable pH sensitivity for sensor applications.</a> <em class="text-slate-500">Applied Physics Express</em>.</p></li>
-                            <li><p><span class="font-semibold text-slate-900">Kilinc, V., Henry-de-Villeneuve, C., Nguy, T.P., Wakayama, Y., Charrier, A.*, Raimundo, J-M.*</span> (2019). <a href="https://doi.org/10.1021/acsami.9b18188" target="_blank" class="text-teal-600 hover:underline">Novel and Innovative Interface as Potential Active Layer in Chem-FET Sensor Devices for the Specific Sensing of Cs<sup>+</sup>.</a> <em class="text-slate-500">ACS Applied Materials & Interfaces</em>.</p></li>
-                            <li><p><span class="font-semibold text-slate-900">Nguy, T.P., Hayakawa, R., Kilinc, V., Petit, M., Raimundo, J-M., Charrier, A., Wakayama, Y.* </span> (2019). <a href="https://doi.org/10.7567/1347-4065/ab09d2" target="_blank" class="text-teal-600 hover:underline">Stable operation of water-gated organic field-effect transistor depending on channel flatness, electrode metals and surface treatment.</a> <em class="text-slate-500">Japanese Journal of Applied Physics</em>.</p></li>
-                            <li><p><span class="font-semibold text-slate-900">Kenaan, A., El Zein, R., Kilinc, V., Lamant, S., Raimundo, J-M., Charrier, A.* </span> (2018). <a href="https://doi.org/10.1002/adfm.201801024" target="_blank" class="text-teal-600 hover:underline">Ultrathin Supported Lipid Monolayer with Unprecedented Mechanical and Dielectric Properties.</a> <em class="text-slate-500">Advanced Functional Materials</em>.</p></li>
-                            <li><p><span class="font-semibold text-slate-900">Fredj, D., Pourcin, F., Alkarsifi, R., Kilinc, V., Liu, X., Ben Dkhil, S., Boudjada, N.C., Fahlman, M., Videlot-Ackermann, C., Margeat, O.*, Ackermann, J.*, Boujelbene, M.* </span> (2018). <a href="https://doi.org/10.1021/acsami.7b16297" target="_blank" class="text-teal-600 hover:underline">Fabrication and Characterization of Hybrid Organic–Inorganic Electron Extraction Layers for Polymer Solar Cells toward Improved Processing Robustness and Air Stability.</a> <em class="text-slate-500">ACS Applied Materials & Interfaces</em>.</p></li>
-                        </ul>
-                    </div>
-                    <div class="mt-12">
-                        <h4 class="text-xl font-semibold text-slate-800 mb-6 border-b pb-3">Patents</h4>
-                        <ul class="space-y-4 text-slate-700">
-                            <li><p><span class="font-semibold text-slate-900">Kilinc, V.*, et al.</span> (2023). <span>“Method of DNA retrieving by using field-effect transistor”.</span> <em class="text-slate-500">JP Patent Application</em>.</p></li>
-                            <li><p><span class="font-semibold text-slate-900">Wakayama, Y; Kilinc, V., et al.</span> (2020). <span>“Alkali metal ion detection sensor and radioactive cesium ion detection sensor”.</span> <em class="text-slate-500">JP Patent Issued</em>.</p></li>
-                        </ul>
-                    </div>
-                    <div class="mt-12 text-center bg-slate-50 p-8 rounded-lg border">
-                        <h4 class="text-lg font-bold text-slate-900">My Doctoral Thesis</h4>
-                        <p class="mt-2 text-slate-600 max-w-2xl mx-auto italic">“Development of Organic Field-Effect Transistor for the detection of cesium in seawater”</p>
-                        <a href="PhD_Thesis_Volkan_Kilinc.pdf" download="PhD_Thesis_Volkan_Kilinc.pdf" class="mt-6 inline-flex items-center bg-teal-600 text-white font-semibold px-6 py-3 rounded-lg shadow-sm hover:bg-teal-700 transition-colors">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
-                            <span>Download Thesis (PDF)</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
         </section>
 
-        <!-- AI Architect Achievements Page -->
-        <section id="ai-architect" class="page-section fade-in">
-            <!-- Intro -->
-            <div class="min-h-[50vh] flex items-center mb-16">
-                <div class="w-full">
-                    <span class="font-semibold text-teal-600">An Architect's Mindset, An Innovator's Drive</span>
-                    <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 mt-2 mb-4 leading-tight">
-                        Architecting a Smarter Future by <span class="text-teal-600">Solving Problems with AI.</span>
-                    </h1>
-                    <p class="text-lg text-slate-600 max-w-3xl">
-                        I apply first-principles thinking and analytical rigor to deconstruct complex challenges. My focus is on architecting and directing the creation of impactful, AI-driven applications that deliver elegant, real-world solutions.
-                    </p>
-                </div>
+        <!-- Project Portfolio Section -->
+        <section id="portfolio" class="page-section fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Project Portfolio</h2>
+                <p class="text-lg text-slate-600 mt-2 max-w-3xl mx-auto">A selection of projects that showcase my expertise in scientific research, invention, and AI-driven development.</p>
             </div>
-
-            <!-- AI Projects -->
-             <div>
-                <h3 class="text-2xl font-semibold text-slate-800 mb-8 border-b pb-4">AI & Software Projects</h3>
+            <div>
+                <h3 class="text-2xl font-semibold text-slate-800 mb-8 border-b pb-4">AI-driven Software Applications & Games</h3>
                 <div class="grid md:grid-cols-2 gap-8">
-                     <div class="content-card rounded-lg overflow-hidden group flex flex-col">
+                    <div class="content-card rounded-lg overflow-hidden group flex flex-col">
+                        <!-- TODO: Replace with your image/gif/video. Example: <img src="project-openai.gif" ...> -->
                         <img src="OpenAIScienceProject.jpeg" alt="Abstract AI representation" class="w-full h-56 object-cover">
                         <div class="p-6 flex flex-col flex-grow">
                             <h4 class="text-xl font-bold text-slate-900">Open AI Science - AI-Powered Peer Review</h4>
-                            <p class="text-teal-600 font-semibold text-sm mt-1">Project Lead & Architect</p>
+                            <p class="text-teal-600 font-semibold text-sm mt-1">Project Lead & Designer</p>
                             <p class="mt-4 text-slate-700 flex-grow">Conceived and directed the creation of a full-stack web application that uses a multi-agent AI system to automate and enhance the scientific peer-review process. Architected the complete technical stack from backend to frontend.</p>
                             <div class="mt-4"><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">AI System Design</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Full-Stack Architecture</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">React.js</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Python/Flask</span></div>
                             <a href="https://www.openaiscience.com" target="_blank" class="inline-block mt-4 font-semibold text-teal-600 hover:text-teal-700 transition-colors">Visit Website &rarr;</a>
                         </div>
                     </div>
                     <div class="content-card rounded-lg overflow-hidden group flex flex-col">
+                        <!-- TODO: Replace with your image/gif/video. Example: <img src="project-roadtomars.gif" ...> -->
                         <img src="RoadToMarsProject.jpeg" alt="Crypto / Blockchain representation" class="w-full h-56 object-cover">
                         <div class="p-6 flex flex-col flex-grow">
-                            <h4 class="text-xl font-bold text-slate-900">AI-Directed Crypto Gaming App (RoadToMars)</h4>
-                            <p class="text-teal-600 font-semibold text-sm mt-1">Project Lead & Architect</p>
-                            <p class="mt-4 text-slate-700 flex-grow">Directed a generative AI to architect and build a full-stack, real-time Web3 application on the Solana blockchain. Managed the complete DevOps lifecycle, from AI-assisted coding to cloud deployment.</p>
+                            <h4 class="text-xl font-bold text-slate-900">Crypto Gaming App (RoadToMars)</h4>
+                            <p class="text-teal-600 font-semibold text-sm mt-1">Project Lead & Designer</p>
+                            <p class="mt-4 text-slate-700 flex-grow">Directed a generative AI (Gemini) to architect and build a full-stack, real-time Web3 application on the Solana blockchain. Managed the complete DevOps lifecycle, from AI-assisted coding to cloud deployment.</p>
                             <div class="mt-4"><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Generative AI</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Web3 & Blockchain</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Solana</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">DevOps</span></div>
                             <a href="https://www.roadtomars.app/" target="_blank" class="inline-block mt-4 font-semibold text-teal-600 hover:text-teal-700 transition-colors">Visit Website &rarr;</a>
                         </div>
                     </div>
-                     <div class="content-card rounded-lg overflow-hidden group flex flex-col">
+                </div>
+            </div>
+            <div class="mt-20">
+                <h3 class="text-2xl font-semibold text-slate-800 mb-8 border-b pb-4">Scientific Research Projects</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="content-card rounded-lg overflow-hidden group flex flex-col">
+                        <!-- TODO: Replace with your image/gif/video. Example: <img src="project-dnafet.jpg" ...> -->
+                        <img src="DNAFETProject.jpeg" alt="Nanotechnology / DNA representation" class="w-full h-56 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-xl font-bold text-slate-900">DNA-FET for High-Speed Data Retrieval</h4>
+                            <p class="text-teal-600 font-semibold text-sm mt-1">Lead Researcher & Inventor</p>
+                            <p class="mt-4 text-slate-700 flex-grow">Developed and fabricated a proof-of-concept DNA Field-Effect Transistor (FET) for a novel electronic method of data location in DNA data storage. This foundational work led to a first-author publication and a Japanese patent application.</p>
+                            <div class="mt-4"><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Sensor Fabrication</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">DNA Nanotechnology</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Patent Application</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">R&D</span></div>
+                        </div>
+                    </div>
+                    <div class="content-card rounded-lg overflow-hidden group flex flex-col">
+                        <!-- TODO: Replace with your image/gif/video. Example: <img src="project-dnapods.jpg" ...> -->
+                        <img src="DNApodsProject.jpeg" alt="Biomimetic nanocarrier representation" class="w-full h-56 object-cover">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h4 class="text-xl font-bold text-slate-900">DNA-pods: Biomimetic Nanocarriers</h4>
+                            <p class="text-teal-600 font-semibold text-sm mt-1">Lead Researcher & Inventor</p>
+                            <p class="mt-4 text-slate-700 flex-grow">Designed and synthesized "DNA-pods," a novel class of self-assembled DNA condensates for cost-effective therapeutic delivery. Engineered a unique, thermally-triggered release mechanism inspired by viral uncoating.</p>
+                            <div class="mt-4"><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Drug Delivery</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Self-Assembly</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Biomimicry</span><span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Synthesis</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-20">
+                <h3 class="text-2xl font-semibold text-slate-800 mb-8 border-b pb-4">Consulting & Applied AI Projects</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="content-card rounded-lg overflow-hidden group flex flex-col">
+                        <!-- TODO: Add a cover image for this project. Example: 'menu-redesign-cover.jpeg' -->
                         <img src="MenuProject.jpg" alt="AI Generated Food Imagery" class="w-full h-56 object-cover">
                         <div class="p-6 flex flex-col flex-grow">
                             <h4 class="text-xl font-bold text-slate-900">AI-Powered Menu Redesign for Hospitality</h4>
@@ -417,6 +376,7 @@
                                 <span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Graphic Design</span>
                                 <span class="inline-block bg-slate-100 rounded-full px-3 py-1 text-xs font-semibold text-slate-600 mr-2 mb-2">Visual Branding</span>
                             </div>
+                             <!-- TODO: Create a single 'menu-before-after.jpeg' image and place it in your folder -->
                             <a href="BeforeAfter.png" target="_blank" class="inline-block mt-4 font-semibold text-teal-600 hover:text-teal-700 transition-colors">See Applied Improvements &rarr;</a>
                         </div>
                     </div>
@@ -455,6 +415,47 @@
             </div>
         </section>
 
+        <!-- Publications Section -->
+        <section id="publications" class="page-section fade-in">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900">Publications & Patents</h2>
+                <p class="text-lg text-slate-600 mt-2 max-w-3xl mx-auto">A record of my contributions to the scientific community.</p>
+            </div>
+            <div class="max-w-4xl mx-auto bg-white p-8 rounded-lg border border-gray-200">
+                <div>
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-6 border-b pb-3">Highlighted Publications</h3>
+                    <ul class="space-y-4 text-slate-700">
+                        <li><p><span class="font-semibold text-slate-900">Kilinc, V.*, Sutrisno, L., Henzie, J., Picheau, E., Yamauchi, Y., Ariga, K., Hill, J.P.*</span> (2025). <span>DNA-pods Mimicking Viral Uncoating with Functional Molecule Encapsulation Capabilities.</span> <em class="text-slate-500">Under review at Communications Materials</em>.</p></li>
+                        <li><p><span class="font-semibold text-slate-900">Kilinc, V.*, Henzie, J., Picheau, E., Yamauchi, Y., Hill, J.*</span> (2025). <a href="https://chemrxiv.org/engage/chemrxiv/article-details/67aee2abfa469535b9427eb7" target="_blank" class="text-teal-600 hover:underline">DNA Chromopods: Engineering Chromosome-Inspired Nanoarchitectures as Protocell Blueprints.</a> <em class="text-slate-500">ChemRxiv</em>.</p></li>
+                        <li><p><span class="font-semibold text-slate-900">Kilinc, V.*, Hayakawa, R., Yamauchi, Y., Wakayama, Y., Hill, J.P.* </span> (2024). <a href="https://doi.org/10.1002/adsr.202300176" target="_blank" class="text-teal-600 hover:underline">Nanoporous Dna Field Effect Transistor with Potential for Random-Access Memory Applications.</a> <em class="text-slate-500">Advanced Sensor Research</em>.</p></li>
+                        <li><p><span class="font-semibold text-slate-900">Nguy, T.P., Kilinc, V.,Hayakawa, R., Henry-de-Villeneuve, C., Raimundo, J-M.*, Wakayama, Y.*, Charrier, A.*</span> (2022). <a href="https://doi.org/10.1016/j.snb.2021.130956" target="_blank" class="text-teal-600 hover:underline">Affinity driven ion exchange EG-OFET sensor for high selectivity and low limit of detection of cesium in seawater.</a> <em class="text-slate-500">Sensors and Actuators B: Chemical</em>.</p></li>
+                        <li><p><span class="font-semibold text-slate-900">Nguy, T.P., Hayakawa, R., Kilinc, V., Petit, M., Raimundo, J-M., Charrier, A., Wakayama, Y.* </span> (2020). <a href="https://doi.org/10.1149/ma2020-01312330mtgabs" target="_blank" class="text-teal-600 hover:underline">Electrolyte-Gated Organic Field-Effect Transistor for Ultra-Sensitive Cs Ion Sensor.</a> <em class="text-slate-500">ECS Meeting Abstracts</em>.</p></li>
+                        <li><p><span class="font-semibold text-slate-900">Nguy, T.P., Hayakawa, R., Kilinc, V., Petit, M., Yemineni, N. S L V; Higuchi, M.; Raimundo, J-M., Charrier, A., Wakayama, Y.* </span> (2020). <a href="https://doi.org/10.7567/1882-0786/ab5322" target="_blank" class="text-teal-600 hover:underline">Electrolyte-gated-organic field effect transistors functionalized by lipid monolayers with tunable pH sensitivity for sensor applications.</a> <em class="text-slate-500">Applied Physics Express</em>.</p></li>
+                        <li><p><span class="font-semibold text-slate-900">Kilinc, V., Henry-de-Villeneuve, C., Nguy, T.P., Wakayama, Y., Charrier, A.*, Raimundo, J-M.*, </span> (2019). <a href="https://doi.org/10.1021/acsami.9b18188" target="_blank" class="text-teal-600 hover:underline">Novel and Innovative Interface as Potential Active Layer in Chem-FET Sensor Devices for the Specific Sensing of Cs<sup>+</sup>.</a> <em class="text-slate-500">ACS Applied Materials &amp; Interfaces</em>.</p></li>
+                        <li><p><span class="font-semibold text-slate-900">Nguy, T.P., Hayakawa, R., Kilinc, V., Petit, M., Raimundo, J-M., Charrier, A., Wakayama, Y.* </span> (2019). <a href="https://doi.org/10.7567/1347-4065/ab09d2" target="_blank" class="text-teal-600 hover:underline">Stable operation of water-gated organic field-effect transistor depending on channel flatness, electrode metals and surface treatment.</a> <em class="text-slate-500">Japanese Journal of Applied Physics</em>.</p></li>
+                        <li><p><span class="font-semibold text-slate-900">Kenaan, A., El Zein, R., Kilinc, V., Lamant, S., Raimundo, J-M., Charrier, A.* </span> (2018). <a href="https://doi.org/10.1002/adfm.201801024" target="_blank" class="text-teal-600 hover:underline">Ultrathin Supported Lipid Monolayer with Unprecedented Mechanical and Dielectric Properties.</a> <em class="text-slate-500">Advanced Functional Materials</em>.</p></li>
+                        <li><p><span class="font-semibold text-slate-900">Fredj, D., Pourcin, F., Alkarsifi, R., Kilinc, V., Liu, X., Ben Dkhil, S., Boudjada, N.C., Fahlman, M., Videlot-Ackermann, C., Margeat, O.*, Ackermann, J.*, Boujelbene, M.* </span> (2018). <a href="https://doi.org/10.1021/acsami.7b16297" target="_blank" class="text-teal-600 hover:underline">Fabrication and Characterization of Hybrid Organic–Inorganic Electron Extraction Layers for Polymer Solar Cells toward Improved Processing Robustness and Air Stability.</a> <em class="text-slate-500">ACS Applied Materials &amp; Interfaces</em>.</p></li>
+                    </ul>
+                </div>
+                <div class="mt-12">
+                    <h3 class="text-2xl font-semibold text-slate-800 mb-6 border-b pb-3">Patents</h3>
+                    <ul class="space-y-4 text-slate-700">
+                        <li><p><span class="font-semibold text-slate-900">Kilinc, V.*, et al.</span> (2023). <span>“Method of DNA retrieving by using field-effect transistor”.</span> <em class="text-slate-500">JP Patent Application</em>.</p></li>
+                        <li><p><span class="font-semibold text-slate-900">Wakayama, Y; Kilinc, V., et al.</span> (2020). <span>“Alkali metal ion detection sensor and radioactive cesium ion detection sensor”.</span> <em class="text-slate-500">JP Patent Issued</em>.</p></li>
+                    </ul>
+                </div>
+                <div class="mt-12 text-center bg-slate-50 p-8 rounded-lg border">
+                    <h3 class="text-xl font-bold text-slate-900">My Doctoral Thesis</h3>
+                    <p class="mt-2 text-slate-600 max-w-2xl mx-auto italic">“Development of Organic Field-Effect Transistor for the detection of cesium in seawater”</p>
+                    <!-- TODO: Place your thesis file named 'PhD_Thesis_Volkan_Kilinc.pdf' in the same folder as this index.html file -->
+                    <a href="PhD_Thesis_Volkan_Kilinc.pdf" download="PhD_Thesis_Volkan_Kilinc.pdf" class="mt-6 inline-flex items-center bg-teal-600 text-white font-semibold px-6 py-3 rounded-lg shadow-sm hover:bg-teal-700 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" /></svg>
+                        <span>Download Thesis (PDF)</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- Contact Section -->
         <section id="contact" class="page-section fade-in">
             <div class="text-center mb-16">
@@ -465,8 +466,12 @@
                 <div class="md:col-span-3 bg-white p-8 rounded-lg content-card">
                     <h3 class="text-2xl font-bold mb-6 text-slate-900">Send Me a Message</h3>
                     <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <!-- This hidden input is for Netlify's form handling -->
                         <input type="hidden" name="form-name" value="contact" />
-                        <p class="hidden"><label>Don’t fill this out if you’re human: <input name="bot-field" /></label></p>
+                        <!-- This hidden field is for spam protection -->
+                        <p class="hidden">
+                            <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+                        </p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                                 <label for="name" class="block text-slate-700 font-semibold mb-2">Full Name</label>
@@ -519,6 +524,7 @@
         <div class="container mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-600">
             <p>&copy; 2025 Researchvyk. All Rights Reserved.</p>
             <div class="flex space-x-6 mt-4 md:mt-0">
+                <!-- TODO: Add the full URL to your LinkedIn profile in the href attribute -->
                 <a href="https://www.linkedin.com/in/volkan-kilinc-ph-d-25a620108/" target="_blank" class="hover:text-slate-900 transition-colors">LinkedIn</a>
                 <a href="https://orcid.org/0009-0006-4402-1024" target="_blank" class="hover:text-slate-900 transition-colors">ORCID</a>
                 <a href="https://scholar.google.com/citations?user=RzkSCecAAAAJ&hl=en" target="_blank" class="hover:text-slate-900 transition-colors">Google Scholar</a>
@@ -535,49 +541,40 @@
         const mobileMenu = document.getElementById('mobile-menu');
 
         function showPage(pageId, clickedLink) {
-            const targetId = pageId.startsWith('#') ? pageId.substring(1) : pageId;
-            
             pages.forEach(page => page.classList.remove('active'));
-            const activePage = document.getElementById(targetId);
+            const activePage = document.getElementById(pageId);
             if (activePage) activePage.classList.add('active');
             
-            navLinks.forEach(link => {
-                const linkId = link.getAttribute('href').substring(1);
-                link.classList.toggle('active', linkId === targetId);
-            });
-            
+            if (clickedLink) {
+                navLinks.forEach(link => link.classList.remove('active'));
+                clickedLink.classList.add('active');
+            } else {
+                 navLinks.forEach(link => {
+                    link.classList.toggle('active', link.getAttribute('href') === `#${pageId}`);
+                 });
+            }
             mobileMenu.classList.add('hidden');
             window.scrollTo(0, 0);
-            
             if (history.pushState) {
-                history.pushState(null, null, `#${targetId}`);
+                history.pushState(null, null, `#${pageId}`);
             } else {
-                location.hash = `#${targetId}`;
+                location.hash = `#${pageId}`;
             }
         }
         
         mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
 
-        // Handle navigation for all links, including mobile
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const pageId = this.getAttribute('href').substring(1);
-                const navLinkElement = document.querySelector(`.nav-link[href='#${pageId}']`);
-                showPage(pageId, navLinkElement);
-            });
-        });
-
         window.onpopstate = () => {
-            const pageId = location.hash.substring(1) || 'about';
+            const pageId = location.hash.substring(1) || 'home';
             showPage(pageId);
+            navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${pageId}`));
         };
 
         document.addEventListener('DOMContentLoaded', () => {
-            const initialPage = location.hash.substring(1) || 'about';
+            const initialPage = location.hash.substring(1) || 'home';
             showPage(initialPage);
+            navLinks.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${initialPage}`));
         });
     </script>
 </body>
-</html>
 
